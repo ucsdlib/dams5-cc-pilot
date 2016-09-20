@@ -32,11 +32,30 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Deploy with Capistrano
+gem 'capistrano', '~> 3.5.0'
+gem 'capistrano-rails', '~> 1.1.7'
+gem 'capistrano-rbenv', '~> 2.0.4'
+gem 'capistrano-bundler', '~> 1.1.3'
+
+gem 'newrelic_rpm', '3.16.0.318'
+
 gem 'curation_concerns', '~> 1.6.1'
+gem 'active-fedora', '11.0.0.rc7'
+gem 'rsolr', '~> 1.0'
+gem 'devise', '~> 3.5.10'
+gem 'devise-guests', '~> 0.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'simplecov', '~> 0.11.2'
+  gem 'capybara', '~> 2.6.0'
+  gem 'rails_autolink', '~> 1.1.6'
+  gem 'rspec-rails', '3.5.0'
+  gem 'rspec-activemodel-mocks', '~> 1.0'
+  gem 'rspec-mocks', '3.5.0'
+  gem 'unicorn', '~> 5.1.0'
 end
 
 group :development do
@@ -50,12 +69,6 @@ end
 
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
+  gem 'fcrepo_wrapper'
 end
 
-gem 'rsolr', '~> 1.0'
-gem 'devise'
-gem 'devise-guests', '~> 0.5'
-group :development, :test do
-  gem 'fcrepo_wrapper'
-  gem 'rspec-rails'
-end

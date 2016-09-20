@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+puts 'Loading environment...'
+require File.expand_path('../../config/environment', __FILE__)
+puts 'Starting import...'
+
+agents = [{label: ['A Creator']}, {label: ['An Artist']}, {label: ['A Contributer']}, {label: ['A Person']}, {label: ['M. Rieder Publishers']}, {label: ['UC San Diego']}]
+agents.each do |attrs|
+  Agent.create(attrs)
+end
+
+topics = [{label: ['Actors--Portraits']}, {label: ['Acapulco Trench Expedition']}, {label: ['Adobe brick']}, {label: ['Tatar Strait']}, {label: ['Person B']}, {label: ['Birds']}, {label: ['Fishes']}, {label: ['Butter fly']}]
+topics.each do |attrs|
+  Concept.create(attrs)
+end
