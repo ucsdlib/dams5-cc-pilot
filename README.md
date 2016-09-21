@@ -39,7 +39,7 @@ bundle exec rake spec
 Or do it in the following steps:
 
 ```bash
-solr_wrapper -p 8983 -d solr/config/ --collection_name hydra-test
+solr_wrapper -p 8983 -d solr/config/ --collection_name hydra-development
 
 # in another window
 fcrepo_wrapper -p 8984 --no-jms
