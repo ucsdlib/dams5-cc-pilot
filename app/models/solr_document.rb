@@ -67,4 +67,38 @@ class SolrDocument
   def physical_description
     self[Solrizer.solr_name('physical_description')]
   end
+
+  def location_of_originals
+    self[Solrizer.solr_name('location_of_originals')]
+  end
+
+  def table_of_contents
+    self[Solrizer.solr_name('table_of_contents')]
+  end
+
+  def finds
+    self[Solrizer.solr_name('finds')]
+  end
+
+  def format
+    self[Solrizer.solr_name('format')]
+  end
+
+  def local_attribution
+    self[Solrizer.solr_name('local_attribution')]
+  end
+
+  def extent
+    self[Solrizer.solr_name('extent')]
+  end
+
+  def exhibit
+    self[Solrizer.solr_name('exhibit')]
+  end
+
+  def finding_aid
+    self[Solrizer.solr_name('finding_aid')]
+  end
+
+
 end

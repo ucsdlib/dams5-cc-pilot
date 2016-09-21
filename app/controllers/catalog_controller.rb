@@ -23,14 +23,11 @@ class CatalogController < ApplicationController
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
-    config.add_facet_field solr_name('human_readable_type', :facetable)
-    config.add_facet_field solr_name('creator', :facetable), limit: 5
-    config.add_facet_field solr_name('keyword', :facetable), limit: 5
-    config.add_facet_field solr_name('subject', :facetable), limit: 5
-    config.add_facet_field solr_name('language', :facetable), limit: 5
-    config.add_facet_field solr_name('based_near', :facetable), limit: 5
-    config.add_facet_field solr_name('publisher', :facetable), limit: 5
-    config.add_facet_field 'generic_type_sim', show: false, single: true
+    config.add_facet_field solr_name('creator', :facetable), :label => 'Creator', :limit => 20
+    config.add_facet_field solr_name('topic', :facetable), :label => 'Topic', :limit => 20
+    config.add_facet_field solr_name('language', :facetable), :label => 'Language', :limit => 20
+    config.add_facet_field solr_name('publisher', :facetable), :label => 'Publisher', :limit => 20
+    config.add_facet_field solr_name('format', :facetable), :label => 'Format', :limit => 20
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -39,19 +36,13 @@ class CatalogController < ApplicationController
 
     # solr fields to be displayed in the index (search results) view
     #   The ordering of the field names is the order of the display
-    config.add_index_field solr_name('description', :stored_searchable)
-    config.add_index_field solr_name('keyword', :stored_searchable)
-    config.add_index_field solr_name('subject', :stored_searchable)
+    config.add_index_field solr_name('topic', :stored_searchable)
     config.add_index_field solr_name('creator', :stored_searchable)
+    config.add_index_field solr_name('created_date', :stored_searchable)
     config.add_index_field solr_name('contributor', :stored_searchable)
     config.add_index_field solr_name('publisher', :stored_searchable)
-    config.add_index_field solr_name('based_near', :stored_searchable)
     config.add_index_field solr_name('language', :stored_searchable)
-    config.add_index_field solr_name('date_uploaded', :stored_sortable)
-    config.add_index_field solr_name('date_modified', :stored_sortable)
-    config.add_index_field solr_name('date_created', :stored_searchable)
     config.add_index_field solr_name('rights', :stored_searchable)
-    config.add_index_field solr_name('human_readable_type', :stored_searchable)
     config.add_index_field solr_name('format', :stored_searchable)
     config.add_index_field solr_name('identifier', :stored_searchable)
 

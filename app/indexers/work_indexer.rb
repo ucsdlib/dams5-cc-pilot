@@ -47,6 +47,11 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       solr_doc[COLLECTION_DATE] = display_date('collection_date')
       solr_doc[COPYRIGHT_DATE] = display_date('copyright_date')
       solr_doc[ISSUE_DATE] = display_date('issue_date')
+
+      # facet field in general schema
+      object.format.each do |fm|
+        solr_doc[Solrizer.solr_name('format', :facetable)] = fm
+      end
     end
   end
 
