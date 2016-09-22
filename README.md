@@ -28,7 +28,18 @@ Please visit [Curation Concerns](https://github.com/projecthydra/curation_concer
 ```bash
 # Start the test servers
 rake hydra:test_server
+```
 
+Or do it in the following steps:
+
+```bash
+solr_wrapper -p 8985 -d solr/config/ --collection_name hydra-test
+
+# in another window
+fcrepo_wrapper -p 8986 --no-jms
+```
+
+```bash
 # run the test suits
 bundle exec rake spec
 ```
