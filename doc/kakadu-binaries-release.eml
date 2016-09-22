@@ -1,0 +1,457 @@
+Received: from iport-acv6-out.ucsd.edu (132.239.0.13) by
+ XCORE-CUB1.AD.UCSD.EDU (132.239.0.117) with Microsoft SMTP Server (TLS) id
+ 14.3.319.2; Wed, 21 Sep 2016 17:55:08 -0700
+X-UCSD-Delayed-Alias: True
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: A0BNAACBK+NXhyDBq5VeDgwBAQEBAgEBAQEIAQEBAYMHNAEBAQEBdXyNM5o2kQ+BfQcZAQaCSIM2AoIeFAECAQEBAQEBARMBAQEIDQkJGS+EYQEBAQEDCAIZBQUcIwUDAgMNAwIJBwkBBAEBKAMCAhktCQgCBBMLBYg7Dq5wjFcBAQEBAQEBAQEBAQEBAQEBAQEBAQEciwuEFgoHASggAgiCFjiCWgWZdQGGJoYERoRfF4RNiRqMZ4N8HoNggSBNYAGEFg8XgggBAQE
+X-IPAS-Result: A0BNAACBK+NXhyDBq5VeDgwBAQEBAgEBAQEIAQEBAYMHNAEBAQEBdXyNM5o2kQ+BfQcZAQaCSIM2AoIeFAECAQEBAQEBARMBAQEIDQkJGS+EYQEBAQEDCAIZBQUcIwUDAgMNAwIJBwkBBAEBKAMCAhktCQgCBBMLBYg7Dq5wjFcBAQEBAQEBAQEBAQEBAQEBAQEBAQEciwuEFgoHASggAgiCFjiCWgWZdQGGJoYERoRfF4RNiRqMZ4N8HoNggSBNYAGEFg8XgggBAQE
+X-IronPort-AV: E=Sophos;i="5.30,376,1470726000"; 
+   d="scan'208,217";a="170519967"
+X-Spam-Status: No
+X-Spam-Level:
+Received: from smtp.unsw.edu.au (HELO INFPACM004.services.comms.unsw.edu.au)
+ ([149.171.193.32])  by iport-acv6-in.ucsd.edu with ESMTP; 21 Sep 2016
+ 17:55:05 -0700
+X-IronPort-Anti-Spam-Filtered: true
+X-IronPort-Anti-Spam-Result: =?us-ascii?q?A2BRAQDCKuNX//aTXoFeDgwBAQEBAgEBA?=
+ =?us-ascii?q?QEIAQEBAYMHNAEBAQEBdXyNM5o2kQ+CBBkBBoJIgzYCgh4UAQIBAQEBAQEBXie?=
+ =?us-ascii?q?EYQEBAQQIAhkFBRwjBQMCAw0DAgYDBwkBBAEBKAMCAhktCQgCBBMLBYg7Dq5vj?=
+ =?us-ascii?q?FcBAQEBAQEBAQEBAQEBAQEBAQEBAQEciwuEFgoHASggAgiCFjiCWgWZdQGGJoY?=
+ =?us-ascii?q?ERoRfF4RNiRqMZ4N8HjaESk0sNAGEFg8XgggBAQE?=
+X-IPAS-Result: =?us-ascii?q?A2BRAQDCKuNX//aTXoFeDgwBAQEBAgEBAQEIAQEBAYMHNAE?=
+ =?us-ascii?q?BAQEBdXyNM5o2kQ+CBBkBBoJIgzYCgh4UAQIBAQEBAQEBXieEYQEBAQQIAhkFB?=
+ =?us-ascii?q?RwjBQMCAw0DAgYDBwkBBAEBKAMCAhktCQgCBBMLBYg7Dq5vjFcBAQEBAQEBAQE?=
+ =?us-ascii?q?BAQEBAQEBAQEBAQEciwuEFgoHASggAgiCFjiCWgWZdQGGJoYERoRfF4RNiRqMZ?=
+ =?us-ascii?q?4N8HjaESk0sNAGEFg8XgggBAQE?=
+X-IronPort-AV: E=Sophos;i="5.30,376,1470664800"; 
+   d="scan'208,217";a="323010289"
+Received: from l-cnu344b545.ad.unsw.edu.au (HELO LCNU344B545)
+ ([129.94.147.246])  by INFPACM004.services.comms.unsw.edu.au with ESMTP; 22
+ Sep 2016 10:55:00 +1000
+From: Tiffany O'Neill <tiffany@kakadusoftware.com>
+To: "'Critchlow, Matt'" <MCritchlow@ucsd.edu>
+CC: <info@kakadusoftware.com>
+References: <FDB01733-7328-4497-94C0-5FA6C78DB39D@ucsd.edu>
+In-Reply-To: <FDB01733-7328-4497-94C0-5FA6C78DB39D@ucsd.edu>
+Subject: RE: Use of binaries question
+Date: Thu, 22 Sep 2016 10:54:57 +1000
+Message-ID: <005c01d2146b$f0a55930$d1f00b90$@kakadusoftware.com>
+MIME-Version: 1.0
+	boundary="----=_NextPart_000_005D_01D214BF.C2589520"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AQFTuCZ5Oaj7DbSel+ddV4mBcR+eAKGBZaAg
+Content-Language: en-au
+Return-Path: tiffany@kakadusoftware.com
+X-MS-Exchange-Organization-AuthSource: XCORE-CUB1.AD.UCSD.EDU
+X-MS-Exchange-Organization-AuthAs: Anonymous
+Content-type: multipart/alternative;
+	boundary="B_3557375211_1743688637"
+
+> This message is in MIME format. Since your mail reader does not understand
+this format, some or all of this message may not be legible.
+
+--B_3557375211_1743688637
+Content-type: text/plain;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+Hello Matt,
+
+=20
+
+Thanks for your interest in Kakadu Software and for checking with us regard=
+ing our terms of use.  You certainly can use the binaries freely for not-for=
+-profit purposes provided that you include  the following copyright notice w=
+hen using or distributing them:
+
+=20
+
+=E2=80=9CCopyright is owned by NewSouth Innovations Pty Limited, commercial arm o=
+f the UNSW Australia in Sydney. You are free to trial these executables and =
+even to re-distribute them, so long as such use or re-distribution  is accom=
+panied with this copyright notice and is not for commercial gain. Note: Bina=
+ries can only be used for non-commercial purposes. If in doubt please contac=
+t the Kakadu Team at info@kakadusoftware.com.=E2=80=9D
+
+=20
+
+If at any stage your usage requirements change and you either intend to gen=
+erate revenue or require access to the full SDK, please contact us again so =
+that we may put the appropriate  licence agreement in place.
+
+=20
+
+Kind regards,
+
+=20
+
+Tiffany O=E2=80=99Neill | Business Development Manager
+
+Kakadu Software=E2=84=A2 | A business of UNSW Innovations
+
+UNSW AUSTRALIA
+Rupert Myers Building | Gate 14 Barker Street=20
+
+UNSW SYDNEY | NSW 2052 | Australia=20
+T +61 2 9385 6511 | F +61 2 9385 6600 | E info@kakadusoftware.com | Skype: =
+tiffanynsi=20
+www.kakadusoftware.com =20
+
+ABN 25 000 263 025
+
+www.innovations.unsw.edu.au
+
+P Please consider the environment before printing this e-mail
+
+This email and its attachments are confidential to the named addressee and =
+may contain legally privileged  information. They are subject to copyright a=
+nd must not be reproduced without our written consent. If you have received =
+this email in error please let us know and immediately delete it from your s=
+ystem. We do not warrant that this email and its attachments  have not been =
+interfered with or are virus free. If you do not wish to receive further ema=
+ils from us regarding the content of this message please notify us by replyi=
+ng to this email.
+
+=20
+
+=20
+
+=20
+
+=20
+
+From: Critchlow, Matt [mailto:MCritchlow@ucsd.edu]=20
+Sent: Thursday, 22 September 2016 6:58 AM
+To: info@kakadusoftware.com
+Subject: Use of binaries question
+
+=20
+
+Hello,
+
+=20
+
+I am the development manager for the library at UC San Diego. We=E2=80=99re build=
+ing an open source digital asset management system using the Hydra framework=
+ [1] for UC San Diego. One of the desired features  is the generation of JP2=
+ derivatives. We would like to use the binaries that are available for downl=
+oad as some of our partner institutions have done, but want to confirm that =
+this is acceptable to you all.
+
+=20
+
+To be clear, we will not be using these for profit in any way. Our Github o=
+rganization can be found here [2], if that is of any value.
+
+=20
+
+Thank you in advance for your consideration.
+
+=20
+
+Cheers,
+
+=20
+
+Matt Critchlow
+
+Manager of Development and Web Services
+
+UC San Diego Library
+
+=20
+
+1.      https://projecthydra.org/
+
+2.      https://github.com/ucsdlib/=20
+
+
+--B_3557375211_1743688637
+Content-type: text/html;
+	charset="UTF-8"
+Content-transfer-encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsof=
+t-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" xmlns:m=
+=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org=
+/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{mso-style-priority:99;
+	mso-style-link:"Plain Text Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";}
+span.EmailStyle18
+	{mso-style-type:personal;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+span.EmailStyle19
+	{mso-style-type:personal-reply;
+	font-family:"Calibri","sans-serif";
+	color:#1F497D;}
+span.PlainTextChar
+	{mso-style-name:"Plain Text Char";
+	mso-style-priority:99;
+	mso-style-link:"Plain Text";
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body bgcolor=3D"white" lang=3D"EN-AU" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D">Hello Mat=
+t,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D">Thanks fo=
+r your interest in Kakadu Software and for checking with us regarding our te=
+rms of use.&nbsp; You certainly can use the binaries freely for not-for-prof=
+it purposes provided that you include
+ the following copyright notice when using or distributing them:<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoPlainText" style=3D"margin-left:36.0pt">=E2=80=9CCopyright is owned by=
+ NewSouth Innovations Pty Limited, commercial arm of the UNSW&nbsp;Australia=
+ in Sydney.&nbsp;<b>You are free to trial these executables and even to re-d=
+istribute them, so long as such use or re-distribution
+ is accompanied with this copyright notice and is not for commercial gain. =
+Note: Binaries can only be used for non-commercial purposes.</b>&nbsp;If in =
+doubt please contact&nbsp;the Kakadu Team at&nbsp;<a href=3D"mailto:info@kakad=
+usoftware.com">info@kakadusoftware.com</a><span class=3D"MsoHyperlink">.=E2=80=9D<o:=
+p></o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"font-size:10.5pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;;color:#56595C;background:white"><o:p>&nbsp;<=
+/o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"color:#1F497D;mso-fareast-language:EN-=
+AU">If at any stage your usage requirements change and you either intend to =
+generate revenue or require access to the full SDK, please contact us again =
+so that we may put the appropriate
+ licence agreement in place.<o:p></o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"color:#1F497D;mso-fareast-language:EN-=
+AU"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"color:#1F497D;mso-fareast-language:EN-=
+AU">Kind regards,<o:p></o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"color:#1F497D;mso-fareast-language:EN-=
+AU"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&=
+quot;,&quot;sans-serif&quot;;color:#1F497D">Tiffany O=E2=80=99Neill
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#C00049">|
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D">Business Development Manager<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;;color:#A50021">Kakadu Software</span></b><b>=
+<span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif=
+&quot;;color:#990000">=E2=84=A2</span></b><b><span style=3D"font-size:10.0pt;font-fa=
+mily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#A50021">
+</span></b><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&=
+quot;sans-serif&quot;;color:#C00049">|</span></b><b><span style=3D"font-size:1=
+0.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#A50021"> A=
+ business of UNSW Innovations</span></b><b><span style=3D"font-size:10.0pt;fon=
+t-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p>=
+</span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;;color:#1F497D">UNSW AUSTRALIA</span></b><b><=
+span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&=
+quot;;color:#A50021"><br>
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D">Rupert Myers Building
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#A50021">|
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D">Gate 14 Barker Street</span><b><span style=
+=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;colo=
+r:#A50021">
+<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&=
+quot;,&quot;sans-serif&quot;;color:#1F497D">UNSW SYDNEY
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#A50021">|</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"> NSW 2052
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#A50021">|</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"> Australi=
+a
+<br>
+T &#43;61 2 9385 6511 </span><b><span style=3D"font-size:10.0pt;font-family:&=
+quot;Arial&quot;,&quot;sans-serif&quot;;color:#C00049">|</span></b><span sty=
+le=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;co=
+lor:#1F497D"> F &#43;61 2 9385 6600
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#C00049">|</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"> E
+<a href=3D"mailto:info@kakadusoftware.com"><span style=3D"color:blue">info@kaka=
+dusoftware.com</span></a>
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#C00049">|
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D">Skype: tiffanynsi</span><b><span style=3D"fo=
+nt-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#C=
+00049">
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D"><br>
+</span><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quot=
+;sans-serif&quot;;color:#A50021"><a href=3D"http://www.kakadusoftware.com/" ta=
+rget=3D"_blank"><span style=3D"color:#A50021">www.kakadusoftware.com</span></a><=
+/span></b><b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&qu=
+ot;sans-serif&quot;;color:#1F497D">
+</span></b><span style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,&quo=
+t;sans-serif&quot;;color:#1F497D">&nbsp;<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Arial&=
+quot;,&quot;sans-serif&quot;;color:#1F497D">ABN 25 000 263 025<o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;;color:#1F497D"><a href=3D"http://www.innovatio=
+ns.unsw.edu.au/"><span style=3D"color:blue">www.innovations.unsw.edu.au</span>=
+</a><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto"><b><span lang=3D"EN-US" style=3D"font-size:18.0pt;font-family:&quot;Arial&q=
+uot;,&quot;sans-serif&quot;;color:#00B050">P</span></b><b><span lang=3D"EN-US"=
+ style=3D"font-size:11.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot=
+;;color:#00B050">
+</span></b><b><span lang=3D"EN-US" style=3D"font-size:10.0pt;font-family:&quot;=
+Arial&quot;,&quot;sans-serif&quot;;color:#00B050">Please consider the enviro=
+nment before printing this e-mail</span></b><span style=3D"font-size:11.0pt;fo=
+nt-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:a=
+uto"><span style=3D"font-size:7.5pt;font-family:&quot;Arial&quot;,&quot;sans-s=
+erif&quot;;color:#1F497D">This email and its attachments are confidential to=
+ the named addressee and may contain legally privileged
+ information. They are subject to copyright and must not be reproduced with=
+out our written consent. If you have received this email in error please let=
+ us know and immediately delete it from your system. We do not warrant that =
+this email and its attachments
+ have not been interfered with or are virus free. If you do not wish to rec=
+eive further emails from us regarding the content of this message please not=
+ify us by replying to this email.</span><span style=3D"font-size:11.0pt;font-f=
+amily:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#1F497D"><o:p></o:p></s=
+pan></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoPlainText"><span style=3D"color:#1F497D;mso-fareast-language:EN-=
+AU"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;color:#1F497D"><o:p>&nbs=
+p;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0cm 0c=
+m 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"EN-US" style=3D"font-size:10.0pt;font-fam=
+ily:&quot;Tahoma&quot;,&quot;sans-serif&quot;">From:</span></b><span lang=3D"E=
+N-US" style=3D"font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-seri=
+f&quot;"> Critchlow, Matt [mailto:MCritchlow@ucsd.edu]
+<br>
+<b>Sent:</b> Thursday, 22 September 2016 6:58 AM<br>
+<b>To:</b> info@kakadusoftware.com<br>
+<b>Subject:</b> Use of binaries question<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">Hello,<o:p=
+></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">I am the d=
+evelopment manager for the library at UC San Diego. We=E2=80=99re building an open=
+ source digital asset management system using the Hydra framework [1] for UC=
+ San Diego. One of the desired features
+ is the generation of JP2 derivatives. We would like to use the binaries th=
+at are available for download as some of our partner institutions have done,=
+ but want to confirm that this is acceptable to you all.<o:p></o:p></span></=
+p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">To be clea=
+r, we will not be using these for profit in any way. Our Github organization=
+ can be found here [2], if that is of any value.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">Thank you =
+in advance for your consideration.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">Cheers,<o:=
+p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">Matt Critc=
+hlow<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">Manager of=
+ Development and Web Services<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt">UC San Die=
+go Library<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span lang=3D"EN-US" style=3D"font-size:11.0pt"><o:p>&nbsp=
+;</o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-18.0pt"><span lang=3D"EN-US" =
+style=3D"font-size:11.0pt">1.</span><span lang=3D"EN-US" style=3D"font-size:7.0pt;=
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;
+</span><span lang=3D"EN-US" style=3D"font-size:11.0pt"><a href=3D"https://project=
+hydra.org/">https://projecthydra.org/</a><o:p></o:p></span></p>
+<p class=3D"MsoListParagraph" style=3D"text-indent:-18.0pt"><span lang=3D"EN-US" =
+style=3D"font-size:11.0pt">2.</span><span lang=3D"EN-US" style=3D"font-size:7.0pt;=
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;
+</span><span lang=3D"EN-US" style=3D"font-size:11.0pt"><a href=3D"https://github.=
+com/ucsdlib/">https://github.com/ucsdlib/</a>
+<o:p></o:p></span></p>
+</div>
+</body>
+</html>
+
+
+--B_3557375211_1743688637--
+
