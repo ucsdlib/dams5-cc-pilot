@@ -3,7 +3,7 @@ class GeneralSchema < ActiveTriples::Schema
 
   property :description, predicate: ::RDF::Vocab::DC.description
   property :preferred_citation, predicate: ::RDF::Vocab::Bibframe.preferredCitation
-  property :tableOfContents, predicate: ::RDF::Vocab::DC.tableOfContents
+  property :table_of_contents, predicate: ::RDF::Vocab::DC.tableOfContents
   property :arrangement, predicate: ::RDF::Vocab::Bibframe.materialArrangement
   property :biography, predicate: ::UcsdTerms.biography
   property :brief_description, predicate: ::UcsdTerms.briefDescription, multiple: false
@@ -16,7 +16,7 @@ class GeneralSchema < ActiveTriples::Schema
   property :inscription, predicate: ::UcsdTerms.inscription
   property :limits, predicate: ::UcsdTerms.limits
   property :local_attribution, predicate: ::UcsdTerms.localAttribution
-  property :location_of_originals, predicate: ::UcsdTerms.locationOfOriginals
+  property :location_of_originals, predicate: ::UcsdTerms.locationOfOriginals, multiple: false
   property :material_details, predicate: ::UcsdTerms.materialDetails
   property :methodz, predicate: ::UcsdTerms.methods
   property :physical_description, predicate: ::UcsdTerms.physicalDescription
@@ -41,11 +41,11 @@ class GeneralSchema < ActiveTriples::Schema
 
 
   # predicates that required xsd:anyURI value
-  property :identifier, predicate: ::RDF::Vocab::DC.identifier
+  property :identifier, predicate: ::RDF::Vocab::DC.identifier, multiple: false
   property :area, predicate: ::UcsdTerms.area
   property :depiction, predicate: ::UcsdTerms.depiction
-  property :exhibit, predicate: ::UcsdTerms.exhibit
-  property :finding_aid, predicate: ::UcsdTerms.findingAid
+  property :exhibit, predicate: ::UcsdTerms.exhibit, multiple: false
+  property :finding_aid, predicate: ::UcsdTerms.findingAid, multiple: false
   property :locus, predicate: ::UcsdTerms.locus
   property :news_release, predicate: ::UcsdTerms.newsRelease
   property :stratum, predicate: ::UcsdTerms.stratum
@@ -65,6 +65,6 @@ class GeneralSchema < ActiveTriples::Schema
 
   # Fields to auto display. Ignore those for custom display logic and those admin data like (workflow note), title, description, :created_date, :date_created (default), etc.
   def self.display_fields
-    ObjectResource.properties.values.map(&:term) - [:title, :topic, :creator, :contributor, :publisher, :created_date, :brief_description, :identifier, :date_modified, :date_uploaded, :date_created, :depositor, :keyword, :head, :tail]
+    ObjectResource.properties.values.map(&:term) - [:title, :topic, :creator, :contributor, :publisher, :created_date, :brief_description, :description, :identifier, :date_modified, :date_uploaded, :date_created, :depositor, :keyword, :head, :tail]
   end
 end
