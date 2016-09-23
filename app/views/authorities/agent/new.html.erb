@@ -1,0 +1,39 @@
+<% provide :page_title, 'Authorities' %>
+<% provide :page_header do %>
+  <h1 class="lower">Create New Agent</h1>
+<% end %>
+<%= form_for @agent, url: {action: "create"} do |f| %>
+  <div class="col-md-6">
+    <fieldset class="required">
+      <legend>Required Information</legend>
+      <div class="form-group string required">
+        <%= f.label :label, class: 'control-label string required' %>
+        <% if !@agent.errors["label"].blank? %>
+          <span class="has-error help-block error">Label <%= @agent.errors["label"].first %></span>
+        <% end %>
+        <%= f.text_field :label, multiple: true, class: 'form-control string required', :value => (@agent.label.first if !@agent.nil?) %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :alternate_label, class: 'control-label string optional' %>
+        <%= f.text_field :alternate_label, multiple: true, class: 'form-control string optional', :value => (@agent.alternate_label.first if !@agent.nil?) %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :close_match, class: 'control-label string optional' %>
+        <% if !@agent.errors["close_match"].blank? %>
+          <span class="has-error help-block error">Close Match <%= @agent.errors["close_match"].first %></span>
+        <% end %>
+        <%= f.text_field :close_match, class: 'form-control string optional', :value => (@agent.close_match if !@agent.nil?) %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :related_match, class: 'control-label string optional' %>
+        <% if !@agent.errors["related_match"].blank? %>
+          <span class="has-error help-block error">Close Match <%= @agent.errors["related_match"].first %></span>
+        <% end %>
+        <%= f.text_field :related_match, class: 'form-control string optional', :value => (@agent.related_match if !@agent.nil?) %>
+      </div>
+      <div class="col-md-12 form-actions">
+        <%= f.submit class: 'btn btn-primary require-contributor-agreement' %>
+      </div>
+    </fieldset>
+  </div>
+<% end %>

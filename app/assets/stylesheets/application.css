@@ -18,3 +18,4 @@
  li.attribute { list-style-type: none; padding:0px; margin-left:-40px; width:500px;}
 .col-md-1 {width: 100px; margin-bottom: 2px;}
 .col-md-5 {width: 340px; margin-bottom: 5px;}
+.has-error, error {color: #a94442;}

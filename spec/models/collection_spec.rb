@@ -87,7 +87,7 @@ describe Collection do
 
     it 'should not created with a non URL Finding Aid value' do
       finn_col.save
-      expect { finn_col.save! }.to raise_error
+      expect { finn_col.save! }.to raise_error (Exception)
     end
 
   end
