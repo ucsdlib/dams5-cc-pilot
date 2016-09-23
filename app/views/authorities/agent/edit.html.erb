@@ -1,0 +1,40 @@
+<% provide :page_title, 'Authorities' %>
+<% provide :page_header do %>
+   <h2 class="lower">Edit <%= @agent.label.first %></h2>(<%= @agent.class.name %>)
+<% end %>
+<%= form_for :agent, url: authorities_agent_path, method: :put do |f| %>
+  <div class="col-md-6">
+    <fieldset class="required">
+      <legend>Required Information</legend>
+      <div class="form-group string required">
+        <%= f.label :label, class: 'control-label string required' %>
+        <% if !@agent.errors["label"].blank? %>
+          <span class="has-error help-block error">Label <%= @agent.errors["label"].first %></span>
+        <% end %>
+        <%= f.text_field :label, multiple: true, class: 'form-control string required', :value => @agent.label.first %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :alternate_label, class: 'control-label string optional' %>
+        <%= f.text_field :alternate_label, multiple: true, class: 'form-control string optional', :value => @agent.alternate_label.first %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :close_match, class: 'control-label string optional' %>
+        <% if !@agent.errors["close_match"].blank? %>
+          <span class="has-error help-block error">Close Match <%= @agent.errors["close_match"].first %></span>
+        <% end %>
+        <%= f.text_field :close_match, class: 'form-control string optional', :value => @agent.close_match %>
+      </div>
+      <div class="form-group string optional">
+        <%= f.label :related_match, class: 'control-label string optional' %>
+        <% if !@agent.errors["related_match"].blank? %>
+          <span class="has-error help-block error">Related Match <%= @agent.errors["related_match"].first %></span>
+        <% end %>
+        <%= f.text_field :related_match, class: 'form-control string optional', :value => @agent.related_match %>
+      </div>
+      <div class="col-md-12 form-actions">
+        <%= f.hidden_field :id, :value => @agent.id %>
+        <%= f.submit class: 'btn btn-primary require-contributor-agreement' %>
+      </div>
+    </fieldset>
+  </div>
+<% end %>

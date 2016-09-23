@@ -1,0 +1,32 @@
+<% provide :page_title, 'Authorities' %>
+<% provide :page_header do %>
+   <h1 class="lower"><%= @agent.label.first %></h2>(<%= @agent.class.name %>)
+<% end %>
+  <%= render partial: '/flash_msg', layout: 'shared/flash_messages' %>
+
+  <%= link_to "Edit", "#{@agent.id}/edit", class: 'btn btn-default' %>&nbsp;
+  <%= link_to "New #{@agent.class.name}", "new", class: 'btn btn-default' %>
+<table class="table table-striped <%= @agent.class.name %> attributes">
+  <caption class="table-heading"><h2>Attributes</h2></caption>
+  <thead>
+    <tr><th>Attribute Name</th><th>Values</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="attr_lbl">Label</td>
+      <td class="attr_val"><ul class='tabular'><li class="attribute"><%= @agent.label.first %></li></ul></td>
+    </tr>
+    <tr>
+      <td class="attr_lbl">alternate_label</td>
+      <td class="attr_val"><ul class='tabular'><li class="attribute"><%= @agent.alternate_label.first %></li></ul></td>
+    </tr>
+    <tr>
+      <td class="attr_lbl">Close Match</td>
+      <td class="attr_val"><ul class='tabular'><li class="attribute"><%= link_to @agent.close_match, @agent.close_match %></li></ul></td>
+    </tr>
+    <tr>
+      <td class="attr_lbl">Related Match</td>
+      <td class="attr_val"><ul class='tabular'><li class="attribute"><%= link_to @agent.related_match, @agent.related_match %></li></ul></td>
+    </tr>
+  </tbody>
+</table>

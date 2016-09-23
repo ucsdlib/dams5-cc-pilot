@@ -2,6 +2,7 @@
 # See:  http://www.europeana.eu/schemas/edm/Agent
 class Agent < ActiveFedora::Base
    extend ActiveTriples::Configurable
+   include ActiveModel::Validations
 
   configure type: ::RDF::Vocab::EDM.Agent
 
@@ -11,15 +12,20 @@ class Agent < ActiveFedora::Base
   property :birth, predicate: ::RDF::Vocab::EDM.begin
   property :dead, predicate: ::RDF::Vocab::EDM.end
 
-  validates :label, allow_blank: false, length: { minimum: 1 }
+  # xsd:anyURI
+  property :close_match, predicate: ::RDF::Vocab::SKOS.closeMatch, multiple: false
+  property :related_match, predicate: ::RDF::Vocab::SKOS.relatedMatch, multiple: false
+
+  validates :label, presence: { message: 'field is required.'}
+  validates :close_match, url: true, allow_blank: true
+  validates :related_match, url: true, allow_blank: true
 
   def to_solr(solr_doc = {})
     super.tap do |solr_doc|
       solr_doc[Solrizer.solr_name('label', :stored_searchable)] = label
-      solr_doc[Solrizer.solr_name('identifier', :stored_searchable)] = identifier if !identifier.blank?
       solr_doc[Solrizer.solr_name('alternate_label', :stored_searchable)] = alternate_label if !alternate_label.blank?
-      solr_doc[Solrizer.solr_name('birth', :stored_searchable)] = birth if !birth.blank?
-      solr_doc[Solrizer.solr_name('dead', :stored_searchable)] = identifier if !dead.blank?
+      solr_doc[Solrizer.solr_name('close_match', :stored_searchable)] = close_match if !close_match.blank?
+      solr_doc[Solrizer.solr_name('related_match', :stored_searchable)] = related_match if !related_match.blank?
       solr_doc['uri_ssim'] = uri
     end
   end

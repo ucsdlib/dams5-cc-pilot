@@ -6,6 +6,13 @@ class Ability
 
   # Define any customized permissions here.
   def custom_permissions
+    if !current_user.id.nil?
+      can [:read, :create, :edit, :update, :destroy], Agent
+      can [:read, :create, :edit, :update, :destroy], Concept
+    else
+      can [:read], Agent
+      can [:read], Concept
+    end
     # Limits deleting objects to a the admin user
     #
     # if current_user.admin?
