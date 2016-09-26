@@ -37,8 +37,8 @@ module CommonMetadata
     property :cultural_context, predicate: ::RDF::URI.new("http://purl.org/vra/culturalContext"), class_name: Concept
     
 
-    # spatial: EdmPlace
-    property :spatial, predicate: ::RDF::Vocab::DC.spatial, class_name: EdmPlace
+    # spatial: edm:Place
+    property :spatial, predicate: ::RDF::Vocab::DC.spatial, class_name: Place
 
     # date: edm:TimeSpan
     property :date, predicate: RDF::Vocab::DC11.date, class_name: TimeSpan

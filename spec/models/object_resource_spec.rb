@@ -3,12 +3,12 @@
 require 'rails_helper'
 
 describe ObjectResource do
-  let(:creator) { Agent.create( label: ['Test Creator'] ) }
-  let(:creator_a) { Agent.create( label: ['Creator A'] ) }
-  let(:creator_b) { Agent.create( label: ['Creator B'] ) }
-  let(:contributor) { Agent.create( label: ['Test Contributor'] ) }
-  let(:publisher) { Agent.create( label: ['Test Publisher'] ) }
-  let(:topic) { Concept.create( label: ['Test Topic'] ) }
+  let(:creator) { Agent.create( label: ['Object Creator'] ) }
+  let(:creator_a) { Agent.create( label: ['Object Creator A'] ) }
+  let(:creator_b) { Agent.create( label: ['Object Creator B'] ) }
+  let(:contributor) { Agent.create( label: ['Object Contributor'] ) }
+  let(:publisher) { Agent.create( label: ['Object Publisher'] ) }
+  let(:topic) { Concept.create( label: ['Object Topic'] ) }
   let(:obj) { described_class.new(title: ['Test Object Resource'], description:  ['Test Description Text']) }
   let(:cre_obj) { described_class.new(title: ['Test Object Resource'], creator: [creator.uri], contributor: [contributor.uri]) }
   let(:pub_obj) { described_class.new(title: ['Test Object Resource - Publisher'], creator: [creator_a.uri], publisher: [publisher.uri]) }
@@ -32,8 +32,8 @@ describe ObjectResource do
       expect(cre_obj.id).to be_truthy
       @obj = described_class.find cre_obj.id
       expect(@obj.title.first).to eq 'Test Object Resource'
-      expect(@obj.creator.first.label.first).to eq 'Test Creator'
-      expect(@obj.contributor.first.label.first).to eq 'Test Contributor'
+      expect(@obj.creator.first.label.first).to eq 'Object Creator'
+      expect(@obj.contributor.first.label.first).to eq 'Object Contributor'
     end
 
     it 'should has publisher' do
@@ -42,8 +42,8 @@ describe ObjectResource do
       expect(pub_obj.id).to be_truthy
       @obj = described_class.find pub_obj.id
       expect(@obj.title.first).to eq 'Test Object Resource - Publisher'
-      expect(@obj.creator.first.label.first).to eq 'Creator A'
-      expect(@obj.publisher.first.label.first).to eq 'Test Publisher'
+      expect(@obj.creator.first.label.first).to eq 'Object Creator A'
+      expect(@obj.publisher.first.label.first).to eq 'Object Publisher'
     end
 
     it 'should has topic' do
@@ -53,8 +53,8 @@ describe ObjectResource do
       expect(top_obj.id).to be_truthy
       @obj = described_class.find top_obj.id
       expect(@obj.title.first).to eq 'Test Object Resource - Topic'
-      expect(@obj.creator.first.label.first).to eq 'Creator B'
-      expect(@obj.topic.first.label.first).to eq 'Test Topic'
+      expect(@obj.creator.first.label.first).to eq 'Object Creator B'
+      expect(@obj.topic.first.label.first).to eq 'Object Topic'
     end
 
     it 'should has topic' do

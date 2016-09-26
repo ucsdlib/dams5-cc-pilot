@@ -30,6 +30,16 @@ module AuthoritiesService
       end
       cols 
     end
+
+    # Returns all edm:Place
+    def find_all_places
+      cols = []
+      records = ActiveFedora::Base.where('has_model_ssim:Place')
+      records.each do |rec|
+        cols << [rec.label.first, RDF::URI(ActiveFedora::Base.id_to_uri(rec.id))]
+      end
+      cols 
+    end
   end
 
 end

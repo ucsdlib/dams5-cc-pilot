@@ -10,6 +10,10 @@
     include_blank: true,
     #item_helper: method(:include_current_value),
     input_html: { class: 'form-control' } %>
+  <%= f.input :spatial, as: :multi_value_select,
+    collection: AuthoritiesService.find_all_places,
+    include_blank: true,
+    input_html: { class: 'form-control' } %>
+  <%= f.input :physical_description, as: :multi_value %>
   <%= f.input :created_date, as: :time_span %>
-  <%= f.input :spatial, as: :edm_place %>
 </fieldset>

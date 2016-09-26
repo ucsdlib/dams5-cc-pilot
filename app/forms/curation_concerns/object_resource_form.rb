@@ -16,6 +16,11 @@ module CurationConcerns
 
     NESTED_ASSOCIATIONS = [:creator, :contributor, :publisher, :created_date, :event_date, :spatial, :topic].freeze;
 
+    def self.model_attributes(attrs)
+      super(attrs)
+      convert_to_hash attrs
+    end
+
     protected
       def self.permitted_topic_params
         [:id,
@@ -44,13 +49,6 @@ module CurationConcerns
       def self.permitted_edm_place_params
         [:id,
          :_destroy,
-         {
-           latitude: [],
-           longitude: [],
-           altitude: [],
-           label: [],
-           note: [],
-         },
         ]
       end
 
@@ -64,6 +62,24 @@ module CurationConcerns
         permitted << { spatial_attributes: permitted_edm_place_params }
         permitted << { created_date_attributes: permitted_time_span_params }
         permitted << { event_date_attributes: permitted_time_span_params }
+      end
+
+      def self.convert_to_hash (attrs)
+        attrs.each do |key, value|
+          if value.is_a? Array
+            value.map! { |v| to_hash(v) }
+          else
+            to_hash(value)
+          end
+        end
+      end
+    
+      def self.to_hash(val)
+        begin
+          val.start_with?(ActiveFedora.fedora.host) ? ActiveFedora::Base.find(ActiveFedora::Base.uri_to_id(val)).uri : val
+        rescue
+          val
+        end
       end
   end
 end

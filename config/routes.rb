@@ -29,6 +29,9 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'authorities/:authority/:id', to: 'authorities#show', as: 'authority', :constraints => { authority: /(agent|place)/ }
+  resources :records
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -14,7 +14,12 @@
     input_html: { class: 'form-control' } %>
 
   <%= f.input :general_note, as: :multi_value %>
+  <%= f.input :spatial, as: :multi_value_select,
+    collection: AuthoritiesService.find_all_places,
+    include_blank: true,
+    input_html: { class: 'form-control' } %>
   <%= f.input :finding_aid %>
   <%= f.input :location_of_originals %>
   <%= f.input :table_of_contents, as: :multi_value, input_html: { rows: '4', type: 'textarea'}%>
+
 </fieldset>

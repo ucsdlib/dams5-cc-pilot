@@ -10,36 +10,17 @@ class WorkIndexer < CurationConcerns::WorkIndexer
 
   SORTABLE_DATE = Solrizer.solr_name('date', :sortable)
 
+  AUTHORITIES_TERMS = [:creator, :contributor, :publisher, :topic, :spatial]
   def generate_solr_document
     super.tap do |solr_doc|
 
-      # creator: Agent
-      object.creator.each do |cre|
-        val = agent_label cre
-        facet_searchable solr_doc, 'creator', val
+      # Authorities
+      AUTHORITIES_TERMS.each do |term|
+        object[term].each do |au|
+          val = authority_label au
+          facet_searchable solr_doc, term.to_s, val
+        end
       end
-
-      # contributor: Agent
-      object.contributor.each do |contr|
-        val = agent_label contr
-        facet_searchable solr_doc, 'contributor', val
-      end
-
-      # publisher: Agent
-      object.publisher.each do |pub|
-        val = agent_label  pub
-        facet_searchable solr_doc, 'publisher', val
-      end
-
-      # topic: Concept
-      object.topic.each do |top|
-        val = subject_label top
-        facet_searchable solr_doc, 'topic', val
-      end
-
-      # spatial: EdmPlace
-      solr_doc[Solrizer.solr_name('spatial', :facetable)] = spatial
-      solr_doc[Solrizer.solr_name('spatial', :stored_searchable)] = spatial
 
       solr_doc[DATE] = display_date('date')
       solr_doc[CREATED_DATE] = created_date
@@ -62,24 +43,6 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       Solrizer.insert_field(solr_doc, field_name, val, :stored_searchable)
     end
 
-    def agent_label (obj)
-      return if obj.nil?
-      if obj.is_a? Agent
-        obj.label
-      else
-        Agent.find(obj.split("/")[-1]).label
-      end
-    end
-
-    def subject_label (obj)
-      return if obj.nil?
-      if obj.is_a? Concept
-        obj.label
-      else
-        Concept.find(obj.split("/")[-1]).label
-      end
-    end
-
     def display_date(date_name)
       Array(object[date_name]).map(&:display_label)
     end
@@ -89,8 +52,14 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       object.created_date.first.display_label
     end
 
-    def spatial
-      return unless object.spatial.present?
-      object.spatial.first.label
+    def authority_label(obj)
+      return if obj.nil? || obj.to_s.blank?
+      if Authority.is_authority? obj
+        obj.label
+      elsif obj.start_with?(ActiveFedora.fedora.host)
+        ActiveFedora::Base.find(obj.split("/")[-1]).label
+      else
+        obj.to_s
+      end
     end
 end
