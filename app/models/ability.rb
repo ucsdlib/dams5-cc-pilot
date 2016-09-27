@@ -9,10 +9,12 @@ class Ability
     if !current_user.id.nil?
       can [:read, :create, :edit, :update, :destroy], Authority
       can [:read, :create, :edit, :update, :destroy], Agent
+      can [:read, :create, :edit, :update, :destroy], Concept
       can [:read, :create, :edit, :update, :destroy], Place
     else
       can [:read], Authority
       can [:read], Agent
+      can [:read], Concept
       can [:read], Place
     end
     # Limits deleting objects to a the admin user
