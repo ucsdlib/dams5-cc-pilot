@@ -20,4 +20,16 @@ class Authority < ActiveFedora::Base
       solr_doc['uri_ssim'] = uri
     end
   end
+
+  protected
+    def authority_label(obj)
+      return if obj.nil? || obj.to_s.blank?
+      return obj.label if Authority.is_authority? obj
+      obj = obj.id if obj.is_a? ActiveTriples::Resource
+      if obj.to_s.start_with?(ActiveFedora.fedora.host)
+        ActiveFedora::Base.find(obj.split("/")[-1]).label
+      else
+        obj.to_s
+      end
+  end
 end

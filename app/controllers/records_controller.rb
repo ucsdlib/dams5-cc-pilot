@@ -1,6 +1,7 @@
 # Extends and customizes the RecordsController in hydra-editor
 class RecordsController < ApplicationController
   include RecordsControllerBehavior
+  include AuthoritiesHelper
 
   def index
     redirect_to "/"
@@ -18,6 +19,26 @@ class RecordsController < ApplicationController
 
   def deny_access(exception)
     redirect_to({ controller: :catalog, action: 'show' }, alert: "Error: #{exception.message}")
+  end
+
+  def build_form
+    resource.attributes.each do |key, value|
+      hash_to_uri value
+    end
+    form_class.new(resource)
+  end
+
+  def set_attributes
+    resource.attributes = collect_form_attributes
+    resource.attributes.each do |key, value|
+      if value.is_a? ActiveTriples::Relation
+        values = []
+        value.map { |v| values << to_hash(v) }
+        value.clear.push values
+      else
+         resource.attributes[key] = to_hash(value)
+      end
+    end
   end
 
   protected

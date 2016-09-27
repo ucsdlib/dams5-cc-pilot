@@ -19,8 +19,18 @@
       <tbody>
         <%= render_attribute :label, @obj.label %>
         <%= render_attribute :alternate_label, @obj.alternate_label %>
-        <%= render_attribute :note, @obj.note %>
-        <%= render_attribute :point, @obj.point %>
+        <% if @obj.respond_to? :close_match %>
+          <%= render_authority_attribute :close_match, @obj.close_match %>
+        <% end %>
+        <% if @obj.respond_to? :related_match %>
+          <%= render_authority_attribute :related_match, @obj.related_match %>
+        <% end %>
+        <% if @obj.respond_to? :note %>
+          <%= render_attribute :note, @obj.note %>
+        <% end %>
+        <% if @obj.respond_to? :point %>
+          <%= render_attribute :point, @obj.point %>
+        <% end %>
       </tbody>
     </table>
   </content>
