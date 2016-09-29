@@ -11,6 +11,7 @@ module CurationConcerns
     delegate :topic, to: :model
     delegate :spatial, to: :model
     delegate :general_note, :physical_description, to: :model
+    delegate :language, to: :model
 
     self.terms += [:created_date, :event_date, :spatial, :topic, :general_note, :physical_description]
 

@@ -50,10 +50,9 @@ class GeneralSchema < ActiveTriples::Schema
   property :news_release, predicate: ::UcsdTerms.newsRelease
   property :stratum, predicate: ::UcsdTerms.stratum
   property :rights, predicate: ::RDF::Vocab::EDM.rights
-
+  property :language, predicate: ::RDF::Vocab::DC.language
 
   # predicates that need discussions?
-  #? property :language, predicate: ::RDF::Vocab::DC.language	dc:LinguisticSystem
   #? property :location, predicate: ::RDF::Vocab::DC.spatial	dpla:Place
   #? property :vessel		r2r:vesselName, class_name: Agent
   #? property :isReplacedBy		dpla:isReplacedBy

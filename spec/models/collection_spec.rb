@@ -15,6 +15,8 @@ describe Collection do
   let(:loc_col) { described_class.new(title: ['Test Collection - Location Of Originals'], physical_description: ["Test Location Of Originals"]) }
   let(:fin_col) { described_class.new(title: ['Test Collection - Finding Aid'], finding_aid: "http://test.com/finding/aid") }
   let(:finn_col) { described_class.new(title: ['Test Collection - Finding Aid'], finding_aid: "Not a url") }
+  let(:lan_col) { described_class.new(title: ['Test Collection - Language'], language: ["http://lexvo.org/id/iso639-3/eng"]) }
+  let(:lan_err_col) { described_class.new(title: ['Test Collection - Language'], language: ["Not a url"]) }
 
   describe 'Collection' do
 
@@ -88,6 +90,20 @@ describe Collection do
     it 'should not created with a non URL Finding Aid value' do
       finn_col.save
       expect { finn_col.save! }.to raise_error Exception
+    end
+
+    it 'should throw validation error with invalid URL for language' do
+      lan_err_col.save
+      expect { lan_err_col.save! }.to raise_error Exception
+    end
+
+    it 'should has language url' do
+      lan_col.save ({:validate => false})
+      expect { lan_col.save }.to_not raise_error
+      expect(lan_col.id).to be_truthy
+      @col = described_class.find lan_col.id
+      expect(@col.title.first).to eq 'Test Collection - Language'
+      expect(@col.language).to eq ['http://lexvo.org/id/iso639-3/eng']
     end
 
   end

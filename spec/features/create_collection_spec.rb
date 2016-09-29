@@ -51,5 +51,19 @@ feature 'Create a Collection' do
       expect(page).to have_selector 'h1', text: 'Test Collection'
       expect(page).to have_selector 'li.general_note', text: 'General Note'
     end
+
+    scenario 'should create collection with language url' do
+      visit root_path
+      expect(page).to have_link 'Add a Collection'
+
+      click_link 'Add a Collection'
+      expect(page).to have_selector 'h1', text: 'Create New Collection'
+
+      fill_in 'collection_title', with: 'Test Collection - Language'
+      fill_in 'collection_language', with: 'http://test.com/any/language'
+      click_button 'Create Collection'
+      expect(page).to have_selector 'h1', text: 'Test Collection - Language'
+      expect(page).to have_selector 'li.language', text: 'http://test.com/any/language'
+    end
   end
 end

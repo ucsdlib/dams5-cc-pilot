@@ -42,5 +42,14 @@ feature 'Create a ObjectResource' do
       expect(page).to have_content 'Test ObjectResource'
       expect(page).to have_content 'Test Physical Description'
     end
+
+    scenario 'should create collection with language url' do
+      visit new_curation_concerns_object_resource_path
+      fill_in 'Title', with: 'Test ObjectResource - Language'
+      fill_in 'Language', with: 'http://test.com/any/language'
+      click_button 'Create Object resource'
+      expect(page).to have_selector 'h1', text: 'Test ObjectResource - Language'
+      expect(page).to have_selector 'li.language', text: 'http://test.com/any/language'
+    end
   end
 end

@@ -10,6 +10,7 @@ class ObjectResource < ActiveFedora::Base
   # self.valid_child_concerns = []
 
   validates :title, presence: { message: 'Title is required.' }
+  validates :language, url: true, allow_blank:true
 
   def self.indexer
     ::WorkIndexer

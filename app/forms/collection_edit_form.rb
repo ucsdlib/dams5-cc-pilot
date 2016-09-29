@@ -8,12 +8,12 @@ class CollectionEditForm < CurationConcerns::Forms::CollectionEditForm
   delegate :created_date, to: :model
   delegate :extent, :local_attribution, :finding_aid, :exhibit, to: :model
   delegate :brief_description, :general_note, :location_of_originals, :format, :table_of_contents, to: :model
-
+  delegate :language, to: :model
 
   def self.model_attributes(attrs)
     attrs[:title] = Array(attrs[:title]) if attrs[:title]
     super(attrs)
-    convert_to_hash JSON.parse(attrs.to_json)
+    convert_to_hash ActiveSupport::HashWithIndifferentAccess.new(attrs)
   end
 
   def initialize_fields
