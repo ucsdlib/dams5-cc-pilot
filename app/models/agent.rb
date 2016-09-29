@@ -1,26 +1,24 @@
-# Agent is a class in EDM that has possible subclasses of
+# Agent is a class in EDM that has possible subclasses
 # See:  http://www.europeana.eu/schemas/edm/Agent
-class Agent < ActiveFedora::Base
-   extend ActiveTriples::Configurable
+class Agent < Authority
 
   configure type: ::RDF::Vocab::EDM.Agent
 
-  property :label, predicate: ::RDF::Vocab::SKOS.prefLabel
-  property :alternate_label, predicate: ::RDF::Vocab::SKOS.altLabel
-  property :identifier, predicate: ::RDF::Vocab::DC11.identifier
-  property :birth, predicate: ::RDF::Vocab::EDM.begin
-  property :dead, predicate: ::RDF::Vocab::EDM.end
+  # xsd:anyURI
+  property :close_match, predicate: ::RDF::Vocab::SKOS.closeMatch, multiple: true
+  property :related_match, predicate: ::RDF::Vocab::SKOS.relatedMatch, multiple: true
 
-  validates :label, allow_blank: false, length: { minimum: 1 }
+  validates :close_match, url: true, allow_blank: true
+  validates :related_match, url: true, allow_blank: true
 
   def to_solr(solr_doc = {})
     super.tap do |solr_doc|
-      solr_doc[Solrizer.solr_name('label', :stored_searchable)] = label
-      solr_doc[Solrizer.solr_name('identifier', :stored_searchable)] = identifier if !identifier.blank?
-      solr_doc[Solrizer.solr_name('alternate_label', :stored_searchable)] = alternate_label if !alternate_label.blank?
-      solr_doc[Solrizer.solr_name('birth', :stored_searchable)] = birth if !birth.blank?
-      solr_doc[Solrizer.solr_name('dead', :stored_searchable)] = identifier if !dead.blank?
-      solr_doc['uri_ssim'] = uri
+      close_match.each do |obj|
+        solr_doc[Solrizer.solr_name('close_match', :stored_searchable)] = authority_label(obj)
+      end
+      related_match.each do |obj|
+        solr_doc[Solrizer.solr_name('related_match', :stored_searchable)] = authority_label(obj)
+      end
     end
   end
 end
