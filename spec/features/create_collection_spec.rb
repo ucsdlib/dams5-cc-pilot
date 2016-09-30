@@ -65,5 +65,19 @@ feature 'Create a Collection' do
       expect(page).to have_selector 'h1', text: 'Test Collection - Language'
       expect(page).to have_selector 'li.language', text: 'http://test.com/any/language'
     end
+
+    scenario 'should create collection with resource type label from type url' do
+      visit root_path
+      expect(page).to have_link 'Add a Collection'
+
+      click_link 'Add a Collection'
+      expect(page).to have_selector 'h1', text: 'Create New Collection'
+
+      fill_in 'collection_title', with: 'Test Collection - Resource Type'
+      select 'Data', from: "collection_resource_type"
+      click_button 'Create Collection'
+      expect(page).to have_selector 'h1', text: 'Test Collection - Resource Type'
+      expect(page).to have_selector 'li.resource_type', text: 'Data'
+    end
   end
 end

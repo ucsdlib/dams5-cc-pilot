@@ -100,5 +100,8 @@ class SolrDocument
     self[Solrizer.solr_name('finding_aid')]
   end
 
+  def resource_type
+    self[Solrizer.solr_name('resource_type')]
+  end
 
 end

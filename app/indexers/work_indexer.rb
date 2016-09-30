@@ -30,8 +30,11 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       solr_doc[ISSUE_DATE] = display_date('issue_date')
 
       # facet field in general schema
-      object.format.each do |fm|
-        solr_doc[Solrizer.solr_name('format', :facetable)] = fm
+      cv_list = MetadataService.resource_type_list
+      object.resource_type.each do |uri|
+        label = label_for_resource_type(cv_list, uri)
+        facet_searchable solr_doc, 'resource_type', label
+        solr_doc[Solrizer.solr_name('resource_type', :searchable)] = uri
       end
     end
   end
@@ -61,5 +64,14 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       else
         obj.to_s
       end
+    end
+
+    def label_for_resource_type(cv_list, uri)
+      cv_list.each do |pair|
+        if pair[1] == uri
+          return pair[0]
+        end
+      end
+      uri
     end
 end

@@ -27,7 +27,7 @@ class CatalogController < ApplicationController
     config.add_facet_field solr_name('topic', :facetable), :label => 'Topic', :limit => 20
     config.add_facet_field solr_name('language', :facetable), :label => 'Language', :limit => 20
     config.add_facet_field solr_name('publisher', :facetable), :label => 'Publisher', :limit => 20
-    config.add_facet_field solr_name('format', :facetable), :label => 'Format', :limit => 20
+    config.add_facet_field solr_name('resource_type', :facetable), :label => 'Type', :limit => 20
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -43,7 +43,7 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name('publisher', :stored_searchable)
     config.add_index_field solr_name('language', :stored_searchable)
     config.add_index_field solr_name('rights', :stored_searchable)
-    config.add_index_field solr_name('format', :stored_searchable)
+    config.add_index_field solr_name('resource_type', :stored_searchable)
     config.add_index_field solr_name('identifier', :stored_searchable)
 
     # "fielded" search configuration. Used by pulldown among other places.
@@ -157,9 +157,9 @@ class CatalogController < ApplicationController
       }
     end
 
-    config.add_search_field('format') do |field|
+    config.add_search_field('resource_type') do |field|
       field.include_in_advanced_search = false
-      solr_name = solr_name('format', :stored_searchable, type: :string)
+      solr_name = solr_name('resource_type', :stored_searchable, type: :string)
       field.solr_local_parameters = {
         qf: solr_name,
         pf: solr_name

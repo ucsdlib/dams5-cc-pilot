@@ -8,8 +8,8 @@
     #item_helper: method(:include_current_value),
     input_html: { class: 'form-control' } %>
 
-  <%= f.input :format, as: :multi_value_select,
-    collection: MetadataService.format_list,
+  <%= f.input :resource_type, as: :multi_value_select,
+    collection: MetadataService.resource_type_list,
     include_blank: true,
     input_html: { class: 'form-control' } %>
 

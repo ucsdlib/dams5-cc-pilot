@@ -39,8 +39,22 @@ module MetadataService
       values
     end
 
-    def format_list
-      ['Cartographic', 'Data', 'Image', 'Notated music', 'Text', 'Video', 'Sounding recordings-nonmusical']
+    def resource_type_list
+      values = []
+      values << ["Cartographic", "http://id.loc.gov/vocabulary/resourceTypes/car"]
+      values << ["Data", "http://id.loc.gov/vocabulary/resourceTypes/dat"]
+      values << ["Mixed material", "http://id.loc.gov/vocabulary/resourceTypes/mix"]
+      values << ["Moving image", "http://id.loc.gov/vocabulary/resourceTypes/mov"]
+      values << ["Multimedia", "http://id.loc.gov/vocabulary/resourceTypes/mul"]
+      values << ["Notated movement", "http://id.loc.gov/vocabulary/resourceTypes/nmv"]
+      values << ["Notated music", "http://id.loc.gov/vocabulary/resourceTypes/not"]
+      values << ["Software", "http://id.loc.gov/vocabulary/resourceTypes/sof"]
+      values << ["Sound recording", "http://id.loc.gov/vocabulary/resourceTypes/aud"]
+      values << ["Sound recording-musical", "http://id.loc.gov/vocabulary/resourceTypes/aum"]
+      values << ["Sound recording-nonmusical", "http://id.loc.gov/vocabulary/resourceTypes/aun"]
+      values << ["Still image", "http://id.loc.gov/vocabulary/resourceTypes/img"]
+      values << ["Text", "http://id.loc.gov/vocabulary/resourceTypes/txt"]
+      values << ["Three dimensional object", "http://id.loc.gov/vocabulary/resourceTypes/art"]
     end
   end
 

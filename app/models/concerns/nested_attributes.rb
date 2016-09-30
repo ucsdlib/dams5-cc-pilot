@@ -19,6 +19,8 @@ module NestedAttributes
 
     # temporal: edm:TimeSpan
     accepts_nested_attributes_for :temporal, reject_if: :time_span_blank, allow_destroy: true
+    # rightsOverrideExpiration: edm:TimeSpan
+    accepts_nested_attributes_for :rightsOverrideExpiration, reject_if: :time_span_blank, allow_destroy: true
     # dates
     accepts_nested_attributes_for :date, reject_if: :time_span_blank, allow_destroy: true
     accepts_nested_attributes_for :created_date, reject_if: :time_span_blank, allow_destroy: true
