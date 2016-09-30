@@ -5,6 +5,7 @@ class Authority < ActiveFedora::Base
 
   property :label, predicate: ::RDF::Vocab::SKOS.prefLabel
   property :alternate_label, predicate: ::RDF::Vocab::SKOS.altLabel
+  property :public_uri, predicate: ::RDF::Vocab::SKOS.exactMatch
 
   validates :label, presence: { message: 'Label is required.' }
   validates_with LabelExistsValidator
@@ -17,6 +18,7 @@ class Authority < ActiveFedora::Base
     super.tap do |solr_doc|
       solr_doc[Solrizer.solr_name('label', :stored_searchable)] = label
       solr_doc[Solrizer.solr_name('alternate_label', :stored_searchable)] = alternate_label if !alternate_label.blank?
+      solr_doc[Solrizer.solr_name('public_uri', :stored_searchable)] = public_uri if !public_uri.blank?
       solr_doc['uri_ssim'] = uri
     end
   end

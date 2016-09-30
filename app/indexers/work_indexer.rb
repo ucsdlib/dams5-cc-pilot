@@ -30,7 +30,7 @@ class WorkIndexer < CurationConcerns::WorkIndexer
       solr_doc[ISSUE_DATE] = display_date('issue_date')
 
       # facet field in general schema
-      cv_list = MetadataService.resource_type_list
+      cv_list = MetadataService.find_all_resource_types
       object.resource_type.each do |uri|
         label = label_for_resource_type(cv_list, uri)
         facet_searchable solr_doc, 'resource_type', label

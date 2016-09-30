@@ -12,6 +12,7 @@ feature 'Create a Collection' do
 
     before do
       login_as user
+      @res_type = ResourceType.create(label: ["Data"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/dat"])
     end
 
     scenario 'in is allowed to create collections' do

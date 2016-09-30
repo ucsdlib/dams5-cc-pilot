@@ -19,6 +19,7 @@
       <tbody>
         <%= render_attribute :label, @obj.label %>
         <%= render_attribute :alternate_label, @obj.alternate_label %>
+        <%= render_attribute :public_uri, @obj.public_uri %>
         <% if @obj.respond_to? :close_match %>
           <%= render_authority_attribute :close_match, @obj.close_match %>
         <% end %>

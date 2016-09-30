@@ -11,11 +11,13 @@ class Ability
       can [:read, :create, :edit, :update, :destroy], Agent
       can [:read, :create, :edit, :update, :destroy], Concept
       can [:read, :create, :edit, :update, :destroy], Place
+      can [:read, :create, :edit, :update, :destroy], ResourceType
     else
       can [:read], Authority
       can [:read], Agent
       can [:read], Concept
       can [:read], Place
+      can [:read], ResourceType
     end
     # Limits deleting objects to a the admin user
     #

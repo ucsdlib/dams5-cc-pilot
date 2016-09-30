@@ -14,6 +14,7 @@ feature 'Create a ObjectResource' do
 
     before do
       login_as user
+      @res_type = ResourceType.create(label: ["Data"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/dat"])
     end
 
     scenario 'should create object' do
