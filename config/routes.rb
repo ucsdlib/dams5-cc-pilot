@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'authorities/:authority/:id', to: 'authorities#show', as: 'authority', :constraints => { authority: /(agent|concept|place)/ }
+  get 'authorities/:authority/:id', to: 'authorities#show', as: 'authority', :constraints => { authority: /(agent|concept|place|resourcetype)/ }
   resources :records
 
   # The priority is based upon order of creation: first created -> highest priority.

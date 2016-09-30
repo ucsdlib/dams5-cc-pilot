@@ -10,6 +10,9 @@ module CommonMetadata
       ActiveFedora::Indexers::GlobalIndexer.new([:stored_searchable, :symbol])
     )
 
+    # xsd:URI with CVs
+    property :resource_type, predicate: ::RDF::Vocab::DC.type, class_name: ResourceType
+
     # creator: edm:Agent
     property :creator, predicate: ::RDF::Vocab::DC.creator, class_name: Agent
     property :contributor, predicate: RDF::Vocab::DC.contributor, class_name: Agent
@@ -17,6 +20,7 @@ module CommonMetadata
 
     property :rights_holder, predicate: ::RDF::Vocab::DC.rightsHolder, class_name: Agent
     property :name, predicate: ::RDF::Vocab::FOAF.name, class_name: Agent
+    property :vessel, predicate: ::UcsdTerms.vesselName, class_name: Agent
 
     # Group to MARC Relators? 
     property :coprincipal_investigator, predicate: ::UcsdTerms.coPrincipalInvestigator, class_name: Agent
@@ -33,7 +37,6 @@ module CommonMetadata
     property :lithology, predicate: ::RDF::Vocab::DWC.lithostratigraphicTerms, class_name: Concept
     property :scientific_name, predicate: ::RDF::Vocab::DWC.scientificName, class_name: Concept
     property :series, predicate: ::UcsdTerms.series, class_name: Concept
-    property :genre, predicate: ::RDF::Vocab::EDM.hasType, class_name: Concept
     property :cultural_context, predicate: ::RDF::URI.new("http://purl.org/vra/culturalContext"), class_name: Concept
     
 
@@ -50,6 +53,7 @@ module CommonMetadata
 
     # temporal: edm:TimeSpan
     property :temporal, predicate: RDF::Vocab::DC.temporal, class_name: TimeSpan
+    property :rightsOverrideExpiration, predicate: ::RDF::URI.new("http://pcdm.org/2015/06/03/rights#rightsOverrideExpiration"), class_name: TimeSpan
 
   end
 end

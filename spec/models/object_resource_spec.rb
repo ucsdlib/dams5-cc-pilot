@@ -14,6 +14,8 @@ describe ObjectResource do
   let(:pub_obj) { described_class.new(title: ['Test Object Resource - Publisher'], creator: [creator_a.uri], publisher: [publisher.uri]) }
   let(:top_obj) { described_class.new(title: ['Test Object Resource - Topic'], creator: [creator_b.uri], topic: [topic.uri]) }
   let(:phd_obj) { described_class.new(title: ['Test Object Resource - Physical Description'], physical_description: ["Test physical description"]) }
+  let(:lan_obj) { described_class.new(title: ['Test Object Resource - Language'], language: ["http://lexvo.org/id/iso639-3/eng"]) }
+  let(:lan_err_obj) { described_class.new(title: ['Test Object Resource - Language'], language: ["Not a url"]) }
 
   describe 'Object Resource' do
 
@@ -64,6 +66,20 @@ describe ObjectResource do
       @obj = described_class.find phd_obj.id
       expect(@obj.title.first).to eq 'Test Object Resource - Physical Description'
       expect(@obj.physical_description.first).to eq 'Test physical description'
+    end
+
+    it 'should throw validation error with invalid URL for language' do
+      lan_err_obj.save
+      expect { lan_err_obj.save! }.to raise_error Exception
+    end
+
+    it 'should has language url' do
+      lan_obj.save ({:validate => false})
+      expect { lan_obj.save }.to_not raise_error
+      expect(lan_obj.id).to be_truthy
+      @obj = described_class.find lan_obj.id
+      expect(@obj.title.first).to eq 'Test Object Resource - Language'
+      expect(@obj.language).to eq ['http://lexvo.org/id/iso639-3/eng']
     end
   end
 end

@@ -32,4 +32,5 @@ class UcsdTerms < RDF::StrictVocabulary('http://library.ucsd.edu/ontology/dams5.
   term :stratum, label: "stratum".freeze, type: 'rdf:Property'.freeze
   term :anatomy, label: "anatomy".freeze, type: 'rdf:Property'.freeze
   term :series, label: "series".freeze, type: 'rdf:Property'.freeze
+  term :vesselName, label: "vesselName".freeze, type: 'rdf:Property'.freeze
 end

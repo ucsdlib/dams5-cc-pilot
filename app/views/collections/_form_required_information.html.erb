@@ -8,8 +8,8 @@
     #item_helper: method(:include_current_value),
     input_html: { class: 'form-control' } %>
 
-  <%= f.input :format, as: :multi_value_select,
-    collection: MetadataService.format_list,
+  <%= f.input :resource_type, as: :multi_value_select,
+    collection: MetadataService.find_all_resource_types,
     include_blank: true,
     input_html: { class: 'form-control' } %>
 
@@ -18,6 +18,7 @@
     include_blank: true,
     input_html: { class: 'form-control' } %>
 
+  <%= f.input :language, as: :multi_value %>
   <%= f.input :exhibit %>
   <%= f.input :description, as: :multi_value, input_html: { rows: '8', type: 'textarea'} %>
 </fieldset>

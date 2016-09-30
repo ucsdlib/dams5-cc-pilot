@@ -12,9 +12,9 @@ module CurationConcerns
       end
 
       property :part_of, predicate: ::RDF::Vocab::DC.isPartOf
-      property :resource_type, predicate: ::RDF::Vocab::DC.type do |index|
-        index.as :stored_searchable, :facetable
-      end
+      #property :resource_type, predicate: ::RDF::Vocab::DC.type do |index|
+      #  index.as :stored_searchable, :facetable
+      #end
       #property :creator, predicate: ::RDF::Vocab::DC11.creator do |index|
       #  index.as :stored_searchable, :facetable
       #end

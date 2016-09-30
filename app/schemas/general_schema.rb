@@ -50,18 +50,17 @@ class GeneralSchema < ActiveTriples::Schema
   property :news_release, predicate: ::UcsdTerms.newsRelease
   property :stratum, predicate: ::UcsdTerms.stratum
   property :rights, predicate: ::RDF::Vocab::EDM.rights
+  property :language, predicate: ::RDF::Vocab::DC.language
 
+  # xsd:anyURI with CVs
+  property :rightsOverride, predicate: ::RDF::URI.new("http://pcdm.org/2015/06/03/rights#rightsOverride")
+  property :copyright_status, predicate: ::RDF::Vocab::PREMIS.hasCopyrightStatus
 
   # predicates that need discussions?
-  #? property :language, predicate: ::RDF::Vocab::DC.language	dc:LinguisticSystem
-  #? property :location, predicate: ::RDF::Vocab::DC.spatial	dpla:Place
-  #? property :vessel		r2r:vesselName, class_name: Agent
-  #? property :isReplacedBy		dpla:isReplacedBy
-  #? property :replaces		dpla:replaces
-  #? property :rightsOverride		pcdmrts:rightsOverride	#	xsd:anyURI
-  #? property :rightsOverrideExpiration		pcdmrts:rightsOverrideExpiration	xsd:dateTime
-  #? property :copyright_status, predicate: ::RDF::Vocab::PREMIS.hasCopyrightStatus	premis:copyrightStatus
-  #? property :type, predicate: ::RDF::Vocab::DC.type	dc:DCMIType
+  #? property :location, predicate: ::RDF::Vocab::DC.spatial	dpla:Place -- deleted
+  #? property :isReplacedBy		dpla:isReplacedBy                          -- Won't use
+  #? property :replaces		dpla:replaces                                  -- Won't use
+  # property :genre, predicate: ::RDF::Vocab::EDM.hasType, class_name: Concept -- deleted
 
   # Fields to auto display. Ignore those for custom display logic and those admin data like (workflow note), title, description, :created_date, :date_created (default), etc.
   def self.display_fields

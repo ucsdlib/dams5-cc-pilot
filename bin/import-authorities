@@ -4,12 +4,21 @@ puts 'Loading environment...'
 require File.expand_path('../../config/environment', __FILE__)
 puts 'Starting import...'
 
-agents = [{label: ['A Creator']}, {label: ['An Artist']}, {label: ['A Contributer']}, {label: ['A Person']}, {label: ['M. Rieder Publishers']}, {label: ['UC San Diego']}]
-agents.each do |attrs|
-  Agent.create(attrs)
-end
-
-topics = [{label: ['Actors--Portraits']}, {label: ['Acapulco Trench Expedition']}, {label: ['Adobe brick']}, {label: ['Tatar Strait']}, {label: ['Person B']}, {label: ['Birds']}, {label: ['Fishes']}, {label: ['Butter fly']}]
-topics.each do |attrs|
-  Concept.create(attrs)
+resource_types =  []
+resource_types << {label: ["Cartographic"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/car"]}
+resource_types << {label: ["Data"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/dat"]}
+resource_types << {label: ["Mixed material"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/mix"]}
+resource_types << {label: ["Moving image"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/mov"]}
+resource_types << {label: ["Multimedia"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/mul"]}
+resource_types << {label: ["Notated movement"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/nmv"]}
+resource_types << {label: ["Notated music"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/not"]}
+resource_types << {label: ["Software"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/sof"]}
+resource_types << {label: ["Sound recording"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/aud"]}
+resource_types << {label: ["Sound recording-musical"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/aum"]}
+resource_types << {label: ["Sound recording-nonmusical"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/aun"]}
+resource_types << {label: ["Still image"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/img"]}
+resource_types << {label: ["Text"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/txt"]}
+resource_types << {label: ["Three dimensional object"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/art"]}
+resource_types.each do |attrs|
+  ResourceType.create(attrs)
 end

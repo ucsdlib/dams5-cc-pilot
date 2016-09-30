@@ -39,9 +39,14 @@ module MetadataService
       values
     end
 
-    def format_list
-      ['Cartographic', 'Data', 'Image', 'Notated music', 'Text', 'Video', 'Sounding recordings-nonmusical']
+    # Returns all ResourceTypes
+    def find_all_resource_types
+      cols = []
+      records = ActiveFedora::Base.where('has_model_ssim:ResourceType')
+      records.each do |rec|
+        cols << [rec.label.first, rec.public_uri.first]
+      end
+      cols 
     end
   end
-
 end
