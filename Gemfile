@@ -45,6 +45,7 @@ gem 'active-fedora', '11.0.0.rc7'
 gem 'rsolr', '~> 1.0'
 gem 'devise', '~> 3.5.10'
 gem 'devise-guests', '~> 0.5'
+gem 'blacklight-gallery'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

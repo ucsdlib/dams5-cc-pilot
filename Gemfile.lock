@@ -92,6 +92,11 @@ GEM
       blacklight (~> 6.0)
       cancancan (~> 1.8)
       deprecation (~> 1.0)
+    blacklight-gallery (0.6.1)
+      blacklight (~> 6.3)
+      bootstrap-sass (~> 3.0)
+      openseadragon (>= 0.2.0)
+      rails
     blacklight_advanced_search (6.0.2)
       blacklight (~> 6.0, >= 6.0.1)
       parslet
@@ -343,6 +348,8 @@ GEM
       activesupport
       nokogiri (>= 1.4.2)
       solrizer (~> 3.3)
+    openseadragon (0.3.0)
+      rails (> 3.2.0)
     orm_adapter (0.5.0)
     os (0.9.6)
     parslet (1.7.1)
@@ -524,6 +531,7 @@ PLATFORMS
 
 DEPENDENCIES
   active-fedora (= 11.0.0.rc7)
+  blacklight-gallery
   byebug
   capistrano (~> 3.5.0)
   capistrano-bundler (~> 1.1.3)

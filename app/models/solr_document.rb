@@ -3,6 +3,7 @@ class SolrDocument
   include Blacklight::Solr::Document
   # Adds CurationConcerns behaviors to the SolrDocument.
   include CurationConcerns::SolrDocumentBehavior
+  include Blacklight::Gallery::OpenseadragonSolrDocument
 
 
   # self.unique_key = 'id'
