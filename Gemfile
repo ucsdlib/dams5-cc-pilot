@@ -46,6 +46,7 @@ gem 'rsolr', '~> 1.0'
 gem 'devise', '~> 3.5.10'
 gem 'devise-guests', '~> 0.5'
 gem 'blacklight-gallery'
+gem 'factory_girl', '~> 4.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,6 +58,7 @@ group :development, :test do
   gem 'rspec-activemodel-mocks', '~> 1.0'
   gem 'rspec-mocks', '3.5.0'
   gem 'unicorn', '~> 5.1.0'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :development do

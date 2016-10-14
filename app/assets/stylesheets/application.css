@@ -13,8 +13,9 @@
  *= require_tree .
  *= require_self
  */
- ul.listing { list-style-type: none; }
+ ul.listing  { list-style-type: none; }
  ul.tabular { list-style-type: none; }
  li.attribute { list-style-type: none; padding:0px; margin-left:-40px; width:500px;}
 .col-md-1 {width: 100px; margin-bottom: 2px;}
 .col-md-5 {width: 340px; margin-bottom: 5px;}
+ ul.component_list { list-style-type: none; padding-left:10px; padding-bottom:0; margin:2px;}
