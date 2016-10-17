@@ -29,10 +29,11 @@ class MemberAttributeRenderer < ::CurationConcerns::Renderers::AttributeRenderer
     end
 
     def component(values, type, results = [], level)
-      if values.class == CurationConcerns::FileSetPresenter
+      if values.class == CurationConcerns::FileSetPresenter || !values.member_presenters.present?
+        level += 1 if values.class == CurationConcerns::WorkShowPresenter
         results << member_value(values, options[:type], @presenter, level)
       else
-        level += 1      
+        level += 1
         values.member_presenters.each do |file|
           case file
           when CurationConcerns::FileSetPresenter
