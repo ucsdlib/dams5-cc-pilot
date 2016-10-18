@@ -197,6 +197,11 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     extlib (0.9.16)
+    factory_girl (4.7.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.7.0)
+      factory_girl (~> 4.7.0)
+      railties (>= 3.0.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     fcrepo_wrapper (0.6.0)
@@ -542,6 +547,8 @@ DEPENDENCIES
   curation_concerns (~> 1.6.1)
   devise (~> 3.5.10)
   devise-guests (~> 0.5)
+  factory_girl (~> 4.0)
+  factory_girl_rails (~> 4.0)
   fcrepo_wrapper
   jbuilder (~> 2.0)
   jquery-rails

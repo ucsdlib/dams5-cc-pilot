@@ -5,6 +5,7 @@ module CurationConcerns
   class ObjectResourcesController < ApplicationController
     include CurationConcerns::CurationConcernController
     include AuthoritiesHelper
+    include MembersHelper
     self.curation_concern_type = ObjectResource
 
     # Display the form the the user.
