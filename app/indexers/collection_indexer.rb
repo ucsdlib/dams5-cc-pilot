@@ -1,2 +1,3 @@
-class CollectionIndexer < WorkIndexer
+class CollectionIndexer < CurationConcerns::CollectionIndexer
+  include IndexesAttributes
 end
