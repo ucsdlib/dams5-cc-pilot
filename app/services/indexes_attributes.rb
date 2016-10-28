@@ -66,8 +66,6 @@ module IndexesAttributes extend ActiveSupport::Concern
     end
 
     def label_for_resource_type(cv_list, uri)
-      label = cv_list.find {|pair| pair[1] == uri }
-      label = !label.nil? ? label[0] : uri
-      label
+      Array(cv_list.find( proc { [uri] } ) { |pair| pair[1] == uri }).first
     end
 end
