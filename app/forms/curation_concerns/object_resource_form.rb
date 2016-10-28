@@ -12,8 +12,9 @@ module CurationConcerns
     delegate :spatial, to: :model
     delegate :general_note, :physical_description, to: :model
     delegate :language, to: :model
+    delegate :resource_type, to: :model
 
-    self.terms += [:created_date, :event_date, :spatial, :topic, :general_note, :physical_description]
+    self.terms += [:created_date, :event_date, :spatial, :topic, :general_note, :physical_description, :resource_type]
 
     NESTED_ASSOCIATIONS = [:creator, :contributor, :publisher, :created_date, :event_date, :spatial, :topic].freeze;
 

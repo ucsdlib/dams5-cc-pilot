@@ -40,7 +40,8 @@ gem 'capistrano-bundler', '~> 1.1.3'
 
 gem 'newrelic_rpm', '3.16.0.318'
 
-gem 'curation_concerns', '~> 1.6.1'
+#gem 'curation_concerns', '~> 1.6.1'
+gem 'curation_concerns', github:'projecthydra-labs/curation_concerns', branch: :member_of_replace
 gem 'active-fedora', '11.0.0.rc7'
 gem 'rsolr', '~> 1.0'
 gem 'devise', '~> 3.5.10'
