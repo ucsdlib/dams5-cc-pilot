@@ -1,0 +1,6 @@
+hosts
+roles
+*.retry
+*.log
+.vaultpassword
+.vagrant
