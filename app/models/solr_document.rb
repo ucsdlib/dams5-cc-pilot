@@ -105,4 +105,7 @@ class SolrDocument
     self[Solrizer.solr_name('resource_type')]
   end
 
+  def language
+    self[Solrizer.solr_name('language')]
+  end
 end

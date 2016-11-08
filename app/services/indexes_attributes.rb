@@ -31,8 +31,15 @@ module IndexesAttributes extend ActiveSupport::Concern
       # facet field in general schema
       cv_list = MetadataService.find_all_resource_types
       object.resource_type.each do |uri|
-        label = label_for_resource_type(cv_list, uri)
+        label = label_for_resource(cv_list, uri)
         facet_searchable solr_doc, 'resource_type', label
+        solr_doc[Solrizer.solr_name('resource_type', :searchable)] = uri
+      end
+
+      cv_list = MetadataService.find_all_languages
+      object.language.each do |uri|
+        label = label_for_resource(cv_list, uri)
+        facet_searchable solr_doc, 'language', label
         solr_doc[Solrizer.solr_name('resource_type', :searchable)] = uri
       end
     end
@@ -65,7 +72,7 @@ module IndexesAttributes extend ActiveSupport::Concern
       end
     end
 
-    def label_for_resource_type(cv_list, uri)
+    def label_for_resource(cv_list, uri)
       Array(cv_list.find( proc { [uri] } ) { |pair| pair[1] == uri }).first
     end
 end

@@ -13,6 +13,7 @@ feature 'Create a Collection' do
     before do
       login_as user
       @res_type = ResourceType.create(label: ["Data"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/dat"])
+      @language = Language.create(label: ["English"], public_uri: ["http://id.loc.gov/vocabulary/iso639-2/eng"])
     end
 
     scenario 'in is allowed to create collections' do
@@ -61,10 +62,10 @@ feature 'Create a Collection' do
       expect(page).to have_selector 'h1', text: 'Create New Collection'
 
       fill_in 'collection_title', with: 'Test Collection - Language'
-      fill_in 'collection_language', with: 'http://test.com/any/language'
+      select 'English', from: "collection_language"
       click_button 'Create Collection'
       expect(page).to have_selector 'h1', text: 'Test Collection - Language'
-      expect(page).to have_selector 'li.language', text: 'http://test.com/any/language'
+      expect(page).to have_selector 'li.language', text: 'English'
     end
 
     scenario 'should create collection with resource type label from type url' do

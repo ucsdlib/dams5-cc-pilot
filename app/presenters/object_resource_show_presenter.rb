@@ -4,6 +4,6 @@ class ObjectResourceShowPresenter < CurationConcerns::WorkShowPresenter
   delegate :created_date, :event_date, to: :solr_document
   delegate :spatial, to: :solr_document
   delegate :general_note, :physical_description, to: :solr_document
-  delegate :resource_type, to: :solr_document
+  delegate :resource_type, :language, to: :solr_document
 
 end

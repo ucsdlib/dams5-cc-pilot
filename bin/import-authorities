@@ -22,3 +22,13 @@ resource_types << {label: ["Three dimensional object"], public_uri: ["http://id.
 resource_types.each do |attrs|
   ResourceType.create(attrs)
 end
+
+# import Language CVs
+puts 'Start importing Languages ...'
+File.open(File.join(Rails.root, "imports", "iso639-2.tsv"), "r") do |f|
+  headers = f.gets.strip.split("\t")
+  f.each do |line|
+    fields = Hash[headers.zip(line.split("\t"))]
+    Language.create(label: [fields["Label (English)"]], public_uri: [fields["URI"]])
+  end
+end
