@@ -15,6 +15,7 @@ feature 'Create a ObjectResource' do
     before do
       login_as user
       @res_type = ResourceType.create(label: ["Data"], public_uri: ["http://id.loc.gov/vocabulary/resourceTypes/dat"])
+      @language = Language.create(label: ["English"], public_uri: ["http://id.loc.gov/vocabulary/iso639-2/eng"])
     end
 
     scenario 'should create object' do
@@ -44,16 +45,16 @@ feature 'Create a ObjectResource' do
       expect(page).to have_content 'Test Physical Description'
     end
 
-    scenario 'should create collection with language url' do
+    scenario 'should create object with language url' do
       visit new_curation_concerns_object_resource_path
       fill_in 'Title', with: 'Test ObjectResource - Language'
-      fill_in 'Language', with: 'http://test.com/any/language'
+      select 'English', from: "object_resource_language"
       click_button 'Create Object resource'
       expect(page).to have_selector 'h1', text: 'Test ObjectResource - Language'
-      expect(page).to have_selector 'li.language', text: 'http://test.com/any/language'
+      expect(page).to have_selector 'li.language', text: 'English'
     end
 
-    scenario 'should create collection with resource type label from type url' do
+    scenario 'should create object with resource type label from type url' do
       visit new_curation_concerns_object_resource_path
       fill_in 'Title', with: 'Test ObjectResource - Resource Type'
       select 'Data', from: "object_resource_resource_type"

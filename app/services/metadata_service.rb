@@ -41,12 +41,23 @@ module MetadataService
 
     # Returns all ResourceTypes
     def find_all_resource_types
-      cols = []
-      records = ActiveFedora::Base.where('has_model_ssim:ResourceType')
-      records.each do |rec|
-        cols << [rec.label.first, rec.public_uri.first]
-      end
-      cols 
+      find_authority_list 'ResourceType'
     end
+
+    # Returns all Languages
+    def find_all_languages
+      find_authority_list 'Language'
+    end
+
+   private
+      def find_authority_list(model)
+        cols = []
+        records = ActiveFedora::Base.where("has_model_ssim:#{model}")
+        records = records.sort_by{ |rec| rec.label.first }
+        records.each do |rec|
+          cols << [rec.label.first, rec.public_uri.first]
+        end
+        cols 
+      end
   end
 end

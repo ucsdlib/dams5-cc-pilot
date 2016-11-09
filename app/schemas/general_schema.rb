@@ -50,7 +50,6 @@ class GeneralSchema < ActiveTriples::Schema
   property :news_release, predicate: ::UcsdTerms.newsRelease
   property :stratum, predicate: ::UcsdTerms.stratum
   property :rights, predicate: ::RDF::Vocab::EDM.rights
-  property :language, predicate: ::RDF::Vocab::DC.language
 
   # xsd:anyURI with CVs
   property :rightsOverride, predicate: ::RDF::URI.new("http://pcdm.org/2015/06/03/rights#rightsOverride")
